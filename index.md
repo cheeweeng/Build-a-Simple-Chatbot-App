@@ -1,4 +1,4 @@
-This exercise will use [Flowise](https://cheeweeng.github.io/Setup-Flowise-on-Hugging-Face/) to build a LLM-powered English-to-Japanese translator app.  
+This exercise will use [Flowise hosted on Hugging Face](https://cheeweeng.github.io/Setup-Flowise-on-Hugging-Face/) to build a LLM-powered English-to-Japanese translator app.  
 Login to Hugging Face 🤗 and click on the workspace created.  
 At Chatflow dashboard, click “Add New” , a new “Untitled Chatflow” canvas is created.  
 
@@ -19,11 +19,25 @@ In the ChatOpenAI node, click on Additional Parameters and fill in the various f
 In the add credential, name the credential and paste your OpenAI API key.  
 <img width="400" height="200" alt="Image" src="https://github.com/user-attachments/assets/771bf4c0-2e83-45ae-94a1-966bf872a676" />  
 
+Next, search for Chat Prompt Template node and drag it onto the canvas.  
+#### System Message:  
+You are a helpful, friendly and bilingual assistant. You will be asked for assistance in {input language}. You are to provide two responses. One paragraph in {output language} and the other paragraph in {input language}  
+#### Human message:  
+{text}  
+
+Click on the Format Prompt Values.  Input the input and output_language and text by clicking on the pen icon (edit).  
+The input language is English and choose your preferred output language - Japanese, French, Spanish or Chinese.  
+For text, enter {{question}}.
+<div style="display: flex; gap: 10px; justify-content: center;">
 <img width="500" height="400" alt="Image" src="https://github.com/user-attachments/assets/bb798050-b403-4720-bb19-fe30eb7cd1a5" />
+<img width="380" height="180" alt="Image" src="https://github.com/user-attachments/assets/c0fcaeaf-d8c1-490c-a1b5-9cda7d2de440" />
+</div>  
 
-<img width="396" height="190" alt="Image" src="https://github.com/user-attachments/assets/c0fcaeaf-d8c1-490c-a1b5-9cda7d2de440" />
+## Connecting the nodes  
+Connect the output of ChatOpenAI and Chat Prompt Template into the Language Model and Prompt of LLM Chain node respectively.  
+Save the chatflow and the chatbot is ready to start chatting.
+<img width="800" height="600" alt="Image" src="https://github.com/user-attachments/assets/e2dc5dcb-cde0-48c4-a8e5-3855221d0626" />  
 
-<img width="950" height="688" alt="Image" src="https://github.com/user-attachments/assets/e2dc5dcb-cde0-48c4-a8e5-3855221d0626" />
-
-<img width="400" height="725" alt="Image" src="https://github.com/user-attachments/assets/68221471-f947-4cd3-854a-c27f5d0cb0e7" />
+Here's a glimspe of the chat messages.  
+<img width="320" height="580" alt="Image" src="https://github.com/user-attachments/assets/68221471-f947-4cd3-854a-c27f5d0cb0e7" />
   

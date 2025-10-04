@@ -1,4 +1,4 @@
-This exercise will use [Flowise hosted on Hugging Face](https://cheeweeng.github.io/Setup-Flowise-on-Hugging-Face/) to build a LLM-powered English-to-Japanese translator app.  
+This exercise will use [Flowise hosted on Hugging Face](https://cheeweeng.github.io/Setup-Flowise-on-Hugging-Face/) to build a [LLM-powered English-to-Japanese translator app](https://github.com/user-attachments/assets/b17fd520-a4c2-4872-9b1f-da4a14b920d0).  
 Login to Hugging Face 🤗 and click on the workspace created.  
 At Chatflow dashboard, click “Add New” , a new “Untitled Chatflow” canvas is created.  
 
@@ -35,9 +35,10 @@ For text, enter {{question}}.
 
 ## Connecting the nodes  
 Connect the output of ChatOpenAI and Chat Prompt Template into the Language Model and Prompt of LLM Chain node respectively.  
-Save the chatflow and the chatbot is ready to start chatting.
+Save the chatflow and give it an approriate name. The chatbot is ready to start chatting.
 <img width="800" height="600" alt="Image" src="https://github.com/user-attachments/assets/e2dc5dcb-cde0-48c4-a8e5-3855221d0626" />  
 
 Here's a glimspe of the chat messages.  
 <img width="320" height="580" alt="Image" src="https://github.com/user-attachments/assets/68221471-f947-4cd3-854a-c27f5d0cb0e7" />
   
+Back to [Projects Portfolio](https://cheeweeng.github.io/)
